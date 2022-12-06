@@ -24,10 +24,11 @@
           >
         </li> -->
         <li class="nav-item">
-          <router-link to="/IndexCasa" class="nav-link" active-class="active"
+          <router-link to="/Index" class="nav-link" active-class="active"
             >Inicio</router-link
           >
         </li>
+        <button v-if="verificar"><a href="/log">Cerrar Sesion</a></button>
       </ul>
     <!-- </div> -->
   </nav>

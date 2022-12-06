@@ -3,7 +3,7 @@ import LoginUno from './components/LoginUno.vue'
 import FormData from './pages/FormData.vue'
 import PrintData from './pages/PrintData.vue'
 import Details from './pages/Details.vue'
-import IndexCasa from './pages/IndexCasa.vue'
+import Index from './pages/ProductosCard.vue'
 //import Productos from './pages/ProductosCard.vue'
 
 export const routes = [
@@ -12,6 +12,7 @@ export const routes = [
     {path:'/', component:FormData},
     {path:'/print', component:PrintData},
     {path:'/details/:index', component:Details},
-    {path:'/IndexCasa', component:IndexCasa},
+    {path:'/Index', component:Index},
+    {path:'/log', component:LoginUno},
     //{path:'/Productos',component:Productos}
 ]
