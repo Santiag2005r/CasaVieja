@@ -1,13 +1,13 @@
 <template>
     <div class="main">
       <form v-on:submit.prevent="login">
-  <h1>Welcome!</h1>
+  <h1 style="text-align:center; font-family:arial Black;">¡Bienvenido!</h1>
     <input
     v-model="nombreusuario"
       type="text"
       name="username"
       id="username"
-      placeholder="User Name"
+      placeholder="Nombre de usuario"
       class="form-control"
       :style="input"
     />
@@ -17,14 +17,14 @@
       type="password"
       name="password"
       id="password"
-      placeholder="P@$$W0RD"
+      placeholder="Contraseña"
       class="form-control"
       :style="input"
     />
     <br />
     <input @click="buscarUsuario" 
       type="submit"
-      value="Done!"
+      value="Iniciar Sesión"
       class="button"
       id="done"
      :style="inputStyle"
@@ -98,9 +98,9 @@ this.usuarios.value=[]
 
 .main {
   background: rgba(247, 180, 45, 0.269);
-  position: absolute;
+  position:absolute;
   top: 20%;
-  left: 30%;
+  left: 35%;
   width: 30%;
   text-align: center;
   padding: 70px;
@@ -109,11 +109,14 @@ this.usuarios.value=[]
   padding-top: 3%;
   padding-bottom: 5%;
   font-family: "Poppins", sans-serif;
+  display: flex;
 }
 
 h1 {
   cursor: default;
   user-select: none;
+  display: flex;
+  color:rgb(150, 128, 110);  
 }
 
 input {
@@ -126,6 +129,7 @@ input {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+  display: flex;
 }
 
 input:hover {
@@ -137,9 +141,12 @@ input:active {
 }
 
 #done {
-  background: lightgreen;
+  background: rgb(135, 101, 70);
 }
-
+#done:hover{
+  color:white;
+  background-color: rgb(135, 101, 70);
+}
 .button {
   cursor: pointer;
   user-select: none;
@@ -159,4 +166,8 @@ img:hover {
 div{
   border: 1px solid #000000;
 }
+.button{
+  color: white;
+}
+
 </style>

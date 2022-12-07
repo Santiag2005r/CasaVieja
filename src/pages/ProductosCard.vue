@@ -15,12 +15,8 @@
               <nav class='na'>
           
               </nav>
-          </header>
-          <div class="field" id="searchform">
-            <input type="text" id="searchterm" placeholder="Muebles, Camas, Recuadros..." />
-            <button type="button" id="search">Buscar</button>
-          </div>
-      </div>
+            </header>
+        </div>
         <div class="carrusel">
           <h1 class="car"></h1>
           <div class="image-slider">
@@ -68,7 +64,7 @@
               </div>
           </div>
     </div>
-        <header id="header" class="header">
+    <header id="header" class="header">
           <div class="container">
               <div class="row">
                   <div class="four columns">
@@ -103,23 +99,11 @@
         
           <div class="barra">
             <div class="container">
-                <div class="row">
-                        <div class="four columns icono icono1">
-                            <p>Más de 150 diseños<br>
-                            Explora  los diseños más recientes</p>
-                        </div>
-                        <div class="four columns icono icono2">
-                            <p>Muebles diseñados a la medida<br>
-                            Innovamos constantemente</p>
-                        </div>
-                        <div class="four columns icono icono3">
-                            <p>Entregas inmediatas<br>
-                            En más de 33 municipios</p>
-                        </div>
+                <div class="row"></div>
                 </div>
             </div>
     
-        </div>
+  
   
   
         <div id="lista-cursos" class="container">
@@ -281,60 +265,7 @@
                           </div> <!--.card-->
                   </div>
               </div> <!--.row-->
-      </div>
-      <div class="footer-clean">
-        <footer>
-            <div class="container">
-                <div class="row-justify-content-center">
-                  <!--   <div class="col-sm-4 col-md-3 item">
-                        <h3>Servicios</h3>
-                        <ul>
-                          <li><a href="#"></a>Página oficial de la empresa</li>
-                            <li><a href="#">material de alta calidad</a></li>
-                            <li><a href="#">pregunta por nosotros</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-4 col-md-3 item">
-                        <h3>About</h3>
-                        <ul>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Legacy</a></li>
-                        </ul>
-                    </div> -->
-                    
-            <div class="ubicacion"><img src="../assets/ubicacion.png" alt="ubicacion">
-             <p>  <a class="texto" target="_blank" href="https://www.google.com/maps/place/Muebles+Casa+Vieja/@7.0403565,-73.0757384,16.5z/data=!4m5!3m4!1s0x8e6841533dcd8c53:0x8ca53026b7345757!8m2!3d7.040578!4d-73.07572?hl=es">Visítanos</a></p>
-            </div>
-            
-            <div class="col-sm-4-col-md-3-item">
-                             
-              <h3 class="h3">Dirección</h3>
-              <ul>
-                  <li><a>Km 2, Via Floridablanca Piedecuesta, Autopista, Floridablanca, Santander</a></li>
-                  <li><a>Contáctanos: 3174816178 </a></li>
-                  <li><a>Mireya Anaya Suarez</a></li>
-                 
-              </ul>
-          </div>
-          <div class="col-lg-3 item social">
-            <!-- <a href="www.facebook.com"><i class="icon ion-social-facebook"></i></a> -->
-            <a target="_blank" class="icon ion-social-facebook" href="https://www.facebook.com/"></a>
-               <!--  <a href="#"><i class="icon ion-social-twitter"></i></a>           
-                     <a target="_blank" class="icon ion-social-twitter" href="https://www.twitter.com/"></a>
-                     <a href="#"><i class="icon ion-social-snapchat"></i></a>  
-                     <a target="_blank" class="icon ion-social-snapchat" href="https://www.snapchat.com/"></a> 
-                     <a href="#"><i class="icon ion-social-instagram"></i></a> -->
-                <a target="_blank" class="icon ion-social-instagram" href="https://www.instagram.com/mueblescasavieja.col/"></a>
-            
-
-              <p class="copyright">REDES OFICIALES DE CASA VIEJA</p>
-            
-             </div>
-          </div>
-         </div>
-       </footer>
-      </div> 
+      </div>  
       </body>
   </template>
 
@@ -434,11 +365,11 @@ function llenarcarritoHTML(){
         const fila = document.createElement('tr');
         fila.innerHTML = `
         <td><img src="${producto.imagen}"width="90"></td>
-        <td> ${producto.titulo} </td>
-        <td> ${producto.precio} </td>
-        <td> ${producto.cantidad} </td>
-        <td> ${producto.total} </td>
-        <td> <a href="#" class="borrar-curso" data-id="${producto.id}"> X </a> </td>
+        <td><h6> ${producto.titulo}</h6></td>
+        <td><h6>${producto.precio} </h6></td>
+        <td><h6> ${producto.cantidad} </h6></td>
+        <td><h6> ${producto.total} </h6></td>
+        <td> <a href="#" class="borrar-curso" data-id="${producto.id}"> x </a> </td>
         `;
         totalPedido =totalPedido+producto.total;
         contenedorCarrito.appendChild(fila);
@@ -507,6 +438,7 @@ function limpiarHtmlTotal(){
   }
   
   .field {
+    padding:20px;
   display:flex;
   position:relative;
   margin:0.18em auto;
@@ -613,103 +545,7 @@ function limpiarHtmlTotal(){
     max-width: 300px;
     max-height: 300px;
   }
-  .footer-clean {
-    padding:0px ;
-    background-color:rgba(168, 64, 29, 0.507);
-    color:#4b4c4d;
-  }
-  
-  .footer-clean h3 {
-    margin-top:0;
-    margin-bottom:12px;
-    font-weight:bold;
-    font-size:16px;
-  }
-  
-  .footer-clean ul {
-    padding:0;
-    list-style:none;
-    line-height:1.6;
-    font-size:14px;
-    margin-bottom:0;
-  }
-  
-  .footer-clean ul a {
-    color:inherit;
-    text-decoration:none;
-    opacity:0.8;
-  }
-  
-  .footer-clean ul a:hover {
-    opacity:1;
-  }
-  
-  .footer-clean .item.social {
-    text-align:right;
-  }
-  
-  @media (max-width:767px) {
-    .footer-clean .item {
-      text-align:center;
-      padding-bottom:20px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .footer-clean .item.social {
-      text-align:center;
-    }
-  }
-  
-  .footer-clean .item.social > a {
-    font-size:24px;
-    width:40px;
-    height:40px;
-    line-height:40px;
-    display:inline-block;
-    text-align:center;
-    border-radius:50%;
-    border:1px solid #ccc;
-    margin-left:10px;
-    margin-top:22px;
-    color:inherit;
-    opacity:0.75;
-  }
-  
-  .footer-clean .item.social > a:hover {
-    opacity:0.9;
-  }
-  
-  @media (max-width:991px) {
-    .footer-clean .item.social > a {
-      margin-top:40px;
-    }
-  }
-  
-  @media (max-width:767px) {
-    .footer-clean .item.social > a {
-      margin-top:10px;
-    }
-  }
-  
-  .footer-clean .copyright {
-    margin-top:14px;
-    /*margin-bottom:0;*/
-    /*font-size:13px;*/
-    opacity:0.6;
-  }
-  .ubicacion{
-  width:230px;
-  height:40px;
-  text-align:center;
-  position:relative;
-  display: inline-block;
-   left: -40%;
-   right: 1%;
-   top: 30px;
-   
-  
-  }
+ 
   
   .texto{
   color: #222;
@@ -743,7 +579,8 @@ h1.car{
 }
 
 .carrusel{
-  min-height: 2cm;
+min-width: 10px;
+min-height: 2cm;
   display: grid;
   place-items: center;
 }
@@ -763,12 +600,13 @@ h1.car{
   transition: transform 1s;
 }
 .image-slider{
-  display: grid;
+  display: flex;
   place-items: center;
   position: relative;
   overflow: hidden;
-  height: 554px;
-  width: 83%;
+  height: 250px;
+  width: 100%;
+  
 }
 .image-slider-track{
   display: flex;
@@ -812,10 +650,8 @@ h1.car{
   img:hover{
       transform: translateZ(20px);
   }
-
-
   body {
-    background-color: #eae5d5
+    background-color: #f6e2d9
 }
 h1 {
     text-align: center;
@@ -824,21 +660,17 @@ h2 {
     font-size: 3rem;
 }
 header {
-    padding: 1px 0;
-    background: #e2a22c; /* Old browsers */
-    background: -moz-linear-gradient(left, #e2a22c 0%, #744202 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #e2a22c 0%,#744202 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #e2a22c 0%,#744202 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2a22c', endColorstr='#744202',GradientType=1 ); /* IE6-9 */
+    padding: -1px 0;
+    background: #a38e7d; /* Old browsers */
 }
 
 @media (min-width: 750px) {
     header {
-        text-align: left;
+        text-align: right;
     }
 }
 .borrar-curso {
-    background-color: rgb(207, 139, 12);
+    background-color: rgb(244, 233, 213);
     border-radius: 50%;
     padding: 5px 10px;
     text-decoration: none;
@@ -854,23 +686,24 @@ ul {
     margin: 30px 0;
 }
 .submenu {
-    position: relative;
+    position:absolute;
 }
 
 .submenu #carrito{
     display: none;
+
 }
 .submenu:hover #carrito{
-    display: block;
-    position: absolute;
-    right:0;
+    display:flex;
+    position:absolute;
+    right:30px;
 
     top:100%;
     z-index: 1;
     background-color: white;
-    padding: 20px;
-    min-height: 400px;
-    min-width: 300px;
+    padding: 100px;
+    height: 500px;
+    width: 500px;
 }
 
 .six-columns {
@@ -915,27 +748,28 @@ ul {
 
 
 .barra {
-    padding:8px 0;
+    padding:-70px 0;
     margin-top: 0px;
-    background: #e2a22c; /* Old browsers */
-    background: -moz-linear-gradient(left, #e2a22c 0%, #744202 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #e2a22c 0%,#744202 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #e2a22c 0%,#744202 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2a22c', endColorstr='#744202',GradientType=1 ); /* IE6-9 */
+    background: transparent; /* Old browsers */
+    margin-right: -32%;
 }
 
 .barra p {
-    margin-top: -50px;
-    color: white;
+    margin-top: -90px;
+    color: rgb(255, 255, 255);
     height: auto;
+    background: transparent;
+    font-size: 15px;
+    font-style:oblique;
+    
     
 }
 .icono {
     background-repeat: no-repeat;
     background-position: left center;
-    padding-left: 60px;
+    padding-left: 50px;
     background-size: 30px;
-    margin-bottom: 40px;
+    margin-bottom: -1px;
     text-align: center;
 }
 @media (min-width: 750px) {
@@ -943,21 +777,28 @@ ul {
         margin-bottom:0;
     }
 }
-.icono1 {
-    background-image: url(../assets/icono1.png);
-}
-.icono2 {
-    background-image: url(../assets/icono2.png);
-}
-.icono3 {
-    background-image: url(../assets/icono3.png);
-}
 
 #lista-cursos .row {
     margin-bottom:20px;
 }
 .agregar-carrito {
-    margin:10px 0;
+    margin:20px 0;
+}
+/*carrito*/
+
+#vaciar-carrito{
+  position:absolute;
+  width: auto;
+  height: auto;
+margin-left:auto;
+margin-top:340px;
+right:auto;
+left:auto;
+display:flex;
+}
+
+#lista-carrito{
+  border-style:none ;
 }
 .card{
     transition: transform .5s;
@@ -967,7 +808,7 @@ ul {
 }
 .card {
     text-align: center;
-    border: 1px solid #e1e1e1;
+    border: 4px solid #e3cdc3;
     background: white;
 }
 @media (min-width: 550px) {
@@ -976,37 +817,22 @@ ul {
     }
 }
 .info-card  {
-    padding: 10px 20px;
+    padding: 6px 31px;
 }
 
 .info-card p, 
 .card h4 {
-    margin-bottom: 5px;
+    margin-bottom: 1px;
 }
 .info-card .precio {
     text-decoration: line-through;
     font-size: 18px;
     margin-top: 10px;
 }
+
 .info-card .precio span {
     font-weight: 700;
     font-size: 22px;
-}
-
-
-.footer {
-    padding: 20px 0;
-    background: #e2a22c; /* Old browsers */
-    background: -moz-linear-gradient(left, #e2a22c 0%, #744202 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #e2a22c 0%,#744202 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #e2a22c 0%,#744202 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2a22c', endColorstr='#744202',GradientType=1 ); /* IE6-9 */
-}
-
-.footer .menu a{
-display: block;
-margin-bottom: 10px;
-text-decoration: none;
 }
 .container {
   position: relative;
@@ -1173,8 +999,8 @@ body {
   input[type="reset"].button-primary,
   input[type="button"].button-primary {
     color: #FFF;
-    background-color: #d19410;
-    border-color: #d19410; }
+    background-color: #a38e7d;
+    border-color: #e3cdc3; }
   .button.button-primary:hover,
   button.button-primary:hover,
   input[type="submit"].button-primary:hover,
@@ -1292,8 +1118,10 @@ body {
   th,
   td {
     padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid #E1E1E1; }
+    text-align: center;
+    border-bottom: 1px solid #E1E1E1; 
+    
+  }
   th:first-child,
   td:first-child {
     padding-left: 0; }
@@ -1455,6 +1283,7 @@ body {
   
   a {
     background-color: transparent;
+    
   }
   
   /**
@@ -1793,19 +1622,21 @@ body {
   td,
   th {
     padding: 0;
+
   }
   h3{
     font-family:Arial Black;
     font-size: 40px;
-    text-shadow: #503805 1.5px 1.5px;
+    text-shadow: #edd4c1 1.5px 1.5px;
     text-align: center;
-    color: #9b7525;
+    color: #a38e7d;
   }
   p{
     font-size: 12px;
   }
   .submenu{
-   margin-left: 45px;
+   margin-left: 500px;
+   margin-bottom: 10px;
   }
   th{
     font-size: 12px;
@@ -1815,4 +1646,99 @@ body {
     line-height: 1.35; 
     letter-spacing: -.08rem; 
   }
+  header.hea {
+    background: #d8c6bc;
+    width: 100%;
+    z-index: index 80%;
+    position:sticky;
+    height: 30px;
+    margin-right: 5px;
+  
+  }
+  
+  nav.na {
+    text-align: center;
+  }
+  
+  nav.na ul {
+    list-style: none;
+    overflow:hidden; 
+  }
+  
+  nav.na ul a {
+    
+    padding: 20px;
+    color: rgb(157, 96, 26);
+    text-decoration:none;
+    margin-right: 3px;
+  }
+  a:hover {
+    background: #c4b3a9;
+    border-radius: 10px;
+  }
+  @import url(http://fonts.googleapis.com/css?family=Montserrat+Alternates);
+  @import url('https://fonts.googleapis.com/css2?family=Miniver&display=swap');
+  
+  .enc{
+    margin:2px;
+    padding:1px;
+    font:12pt;
+  }
+  
+  .field {
+  display:flex;
+  position:relative;
+  margin:0.40em auto;
+  width:80%;
+  flex-direction:row;
+  border-style: solid;
+  border-width: 1.5px 1.5px;
+  box-shadow:
+  
+  
+   1px 1px 0 rgb(246, 219, 196),
+   3px 3px 0 rgb(215, 174, 141),
+   3px 3px 0 rgb(156, 136, 120),
+   4px 4px 0 rgb(215, 174, 141),
+   3px 3px 0 rgb(156, 136, 120),
+   6px 6px 0 rgb(245, 206, 174),
+   8px 8px 0 rgb(246, 219, 196)
+  ;
+  }
+  
+  .field>input[type=text],
+  .field>button {
+  display:flex;
+  font:1.2em 'Montserrat Alternates';
+  
+  }
+  
+  .field>input[type=text] {
+  flex:1;
+  padding:0.6em;
+  border:0.2em solid rgb(157, 96, 26),
+  }
+  
+  .field>button {
+  padding:30px 0;
+  background-color:#e6d5ca;
+  color:white;
+  border:none;
+  cursor: pointer;
+  display:flex;
+
+
+  }
+  h1.pie{
+  font-family: 'Miniver', cursive;
+  font-size: 80px;
+  text-shadow: 3px 3px #edd4c1;
+  color:rgb(163, 142, 125);
+  text-align: center;
+  }  
+  img.foto{
+  height: 200px;
+  margin-top: 20px;
+  }
+ 
   </style> 

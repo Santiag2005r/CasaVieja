@@ -1,16 +1,19 @@
 <template>
-  <nav class="navbar navbar-light nav-pills" style="background-color: #ffc10761">
+  <body>
+    
+ 
+  <nav class="navbar navbar-light nav-pills">
     <!-- <div class="container"> -->
       <ul class="nav">
        
         <li class="nav-item" v-if="verificar">
           <router-link to="/" class="nav-link" active-class="active"
-            >Formulario</router-link
+            >Agregar Usuarios</router-link
           >
         </li>
         <li class="nav-item" v-if="verificar">
           <router-link to="/print" class="nav-link" active-class="active"
-            >Personas</router-link
+            >Usuarios Registrados</router-link
           >
         </li>
          <li class="nav-item">
@@ -32,6 +35,7 @@
       </ul>
     <!-- </div> -->
   </nav>
+</body>
 </template>
 <script>
 
@@ -54,5 +58,28 @@ export default {
 }}
 </script>
 <style>
+body{
+  background-color: #d8c6bc;
+}
+.nav-item{
+  color: #8b6c53;
+}
+.nav-link{
+  color: #FFF;
+  background-color:#8e400000;
+  border-color: #95786b;
+  transition-duration: 0.4s;
 
+}
+.nav-link:hover {
+  background-color: #af9784;
+  color: white;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #9f8672;
+}
+.navbar{
+  color:#8b6c53
+}
 </style>
