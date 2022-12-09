@@ -31,6 +31,11 @@
             >Inicio</router-link
           >
         </li>
+        <li class="nav-item" v-if="verificar">
+          <router-link to="/Pedido" class="nav-link" active-class="active"
+            >¡Pedir!</router-link
+          >
+        </li>
         <button v-if="verificar"><a href="/log">Cerrar Sesion</a></button>
       </ul>
     <!-- </div> -->

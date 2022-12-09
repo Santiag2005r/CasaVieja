@@ -109,14 +109,14 @@ this.usuarios.value=[]
   padding-top: 3%;
   padding-bottom: 5%;
   font-family: "Poppins", sans-serif;
-  display: flex;
+  display:block;
 }
 
 h1 {
   cursor: default;
   user-select: none;
+  color:rgb(150, 128, 110); 
   display: flex;
-  color:rgb(150, 128, 110);  
 }
 
 input {
