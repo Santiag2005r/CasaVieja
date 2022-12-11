@@ -55,9 +55,6 @@ export default {
       router: useRouter()
     }
   },
-mounted(){
-  console.log(this.valor,'valor')
-},
 methods:{
   buscarUsuario(){
   axios.get('https://vueinventarioaxiossa-default-rtdb.firebaseio.com/persona.json')
@@ -78,7 +75,6 @@ methods:{
 if (this.usuarios.length >= 1){
  /*  router.push('/Imprimir'); */
  this.$store.state.mostrar = true
- this.router.push('/');
 }else{  
   alert("Usuario y contraseña incorrecto")
 }

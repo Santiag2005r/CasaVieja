@@ -1,11 +1,21 @@
 <template>
   <nav class="navbar navbar-light nav-pills" style="background-color: #ffc10761">
-    <!-- <div class="container"> -->
+    <div class="container">
       <ul class="nav">
        
+        <li class="nav-item">
+          <router-link to="/Index" class="nav-link" active-class="active"
+            >Inicio</router-link
+          >
+        </li>
         <li class="nav-item" v-if="verificar">
-          <router-link to="/" class="nav-link" active-class="active"
+          <router-link to="/registro" class="nav-link" active-class="active"
             >Formulario</router-link
+          >
+        </li>
+        <li class="nav-item">
+          <router-link to="/Pedidos" class="nav-link" active-class="active"
+            >Pedidos</router-link
           >
         </li>
         <li class="nav-item" v-if="verificar">
@@ -23,14 +33,10 @@
             >Productos</router-link
           >
         </li> -->
-        <li class="nav-item">
-          <router-link to="/Index" class="nav-link" active-class="active"
-            >Inicio</router-link
-          >
-        </li>
+       
         <button v-if="verificar"><a href="/log">Cerrar Sesion</a></button>
       </ul>
-    <!-- </div> -->
+    </div>
   </nav>
 </template>
 <script>

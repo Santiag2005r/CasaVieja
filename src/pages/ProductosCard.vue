@@ -93,6 +93,7 @@
                                               </thead>
                                           </table>
                                           <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                                          <input type='submit' @click="regitro" id="vaciar-carrito" class="button u-full-width" value="Registrar" />
                                   </div>
                           </li>
                       </ul>
@@ -340,10 +341,13 @@
 
   
   <script>
+import { useRouter } from 'vue-router';
+
   export default{
     data: () => ({
   loading: false,
   selection: 1,
+  router: useRouter()
 }),
 
 methods: {
@@ -352,6 +356,9 @@ methods: {
 
     setTimeout(() => (this.loading = false), 2000)
   },
+  regitro(){
+  this.router.push('/Pedidos')
+}
 },
     mounted(){                   
       const carrito = document.querySelector('#carrito');
@@ -459,6 +466,7 @@ function limpiarHtmlTotal(){
     totalCarrito[1].innerHTML='';
 }
   }
+
 }
   </script>
   
