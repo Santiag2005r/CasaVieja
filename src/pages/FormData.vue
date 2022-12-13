@@ -46,12 +46,12 @@
 /*eslint-disable*/
 import {ref} from 'vue'
 import axios from 'axios'
-import {useStore} from 'vuex'
-import {useRouter} from 'vue-router'
+//import {useStore} from 'vuex'
+//import {useRouter} from 'vue-router'
 export default {
   setup(){
-    const store = useStore()
-    const router = useRouter()
+    //const store = useStore()
+    //const router = useRouter()
     const nombreusuario = ref("")
     const password = ref("")
     //const aporte = ref("")

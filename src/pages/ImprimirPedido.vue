@@ -3,9 +3,9 @@
     <h3>Pedidos</h3>
 
     <ul class="list-group">
-      <li v-for="(pedido, i) in pedido" :key="i"  class="list-group-item">
-        <router-link :to="`/details/${i}`">{{
-          persona.nombreusuario
+      <li v-for="(pedido, i) in pedidos" :key="i"  class="list-group-item">
+        <router-link :to="`/InfoPedido/${pedido.id}`">{{
+          pedido.fecha
         }}</router-link>
       </li>
     </ul>
@@ -17,20 +17,28 @@ import axios from 'axios';
 import {ref} from 'vue';
 export default {
   setup(){
-    const personas = ref([])
-  axios.get('https://vueinventarioaxiossa-default-rtdb.firebaseio.com/persona.json')
+    const pedidos = ref([])
+  axios.get('https://vueinventarioaxiossa-default-rtdb.firebaseio.com/pedido.json')
   .then(res =>{
     console.log(res)
     for(const id in res.data){
-      personas.value.push({
+      pedidos.value.push({
         id: id,
-        nombreusuario: res.data[id].nombreusuario,
-        password:res.data[id].password,
+          codigo:res.data[id].codigo,
+          nameProducto:res.data[id].nameProducto,
+          TipoMadera:res.data[id].TipoMadera,
+          MedioPago:res.data[id].MedioPago,
+          TipoTela:res.data[id].TipoTela,
+          nombre:res.data[id].nombre,
+          tipoDoc:res.data[id].tipoDoc,
+          documento:res.data[id].documento,
+          direccion:res.data[id].direccion,
+          fecha:res.data[id].fecha,
       })
     }
   })
   .catch(error=>console.log(error))
-  return {personas};
+  return {pedidos};
 }
   /* computed: {
     personas() {
