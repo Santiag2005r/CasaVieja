@@ -2,8 +2,9 @@ import {createStore} from 'vuex'
 
 export const store = createStore({
     state:{
-        personas:[{nombre:'Marcela Orrego', email:'marce@foto.com', aporte:'Cerveza'}],
-        mostrar:false,
+        personas:[{nombre:'Marcela', aporte:'Cerveza'}],
+        mostrar:false, 
+        login:true
 
     },
     getters:{

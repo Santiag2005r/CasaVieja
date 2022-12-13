@@ -12,7 +12,7 @@
           >
         </li>
         <li class="nav-item" v-if="verificar">
-          <router-link to="/" class="nav-link" active-class="active"
+          <router-link to="/FormData" class="nav-link" active-class="active"
             >Agregar Usuarios</router-link
           >
         </li>
@@ -26,7 +26,7 @@
             >Usuarios Registrados</router-link
           >
         </li>
-         <li class="nav-item">
+         <li class="nav-item" v-if="check">
           <router-link to="/LoginUno" class="nav-link" active-class="active"
             >Inicio de Sesion</router-link
           >
@@ -36,19 +36,13 @@
             >Productos</router-link
           >
         </li> -->
-        <li class="nav-item">
-          <router-link to="/Index" class="nav-link" active-class="active"
-            >Inicio</router-link
-          >
-        </li>
-        <li class="nav-item" v-if="verificar">
+               <li class="nav-item" v-if="verificar">
           <router-link to="/Pedido" class="nav-link" active-class="active"
             >¡Pedir!</router-link
           >
         </li>
         <button v-if="verificar"><a href="/log">Cerrar Sesion</a></button>
       </ul>
-    </div>
   </nav>
 </body>
 </template>
@@ -62,14 +56,17 @@ export default {
  
   data(){
     return{
-      error:false,
       mostrar:this.$store.state.mostrar,
+      login:this.$store.state.login 
     }
   },
   computed:{
     verificar(){
     return  this.$store.state.mostrar
-  }
+  },
+  check(){
+      return  this.$store.state.login 
+    }
 }}
 </script>
 <style>

@@ -52,7 +52,9 @@ export default {
       usuarios: ref([]),
       nombreusuario: ref(""),
       password: ref(""),
-      router: useRouter()
+      router: useRouter(),
+      nombre: ref("Marcela"),
+      contra: ref("789")
     }
   },
 methods:{
@@ -72,10 +74,16 @@ methods:{
         })
       }
     }
-if (this.usuarios.length >= 1){
- /*  router.push('/Imprimir'); */
+  if(this.nombre===this.nombreusuario && this.contra ===this.password){
+    this.router.push('/pedidos'); 
  this.$store.state.mostrar = true
-}else{  
+ this.$store.state.login = false
+
+}else if(this.usuarios.length >= 1){
+ this.router.push('/pedidos'); 
+ this.$store.state.mostrar = true
+ this.$store.state.login = false
+    }else{  
   alert("Usuario y contraseña incorrecto")
 }
 this.usuarios.value=[]

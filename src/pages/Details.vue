@@ -1,19 +1,19 @@
 <template>
   <div>
-    <div class="card" v-if="persona != undefined">
-      <h5 class="card-header">{{ persona.nombreusuario }}</h5>
+    <div class="card" v-if="personas != undefined">
+      <h5 class="card-header">{{ personas.nombreusuario }}</h5>
       <div class="card-body">
         <div class="card-text">
-          <p>Nombre : {{persona.nombreusuario}}</p>
-          <p>Contraseña : {{persona.password}}</p>
+          <p>Nombre: {{personas.nombreusuario}}</p>
+          <p>Contraseña: {{personas.password}}</p>
         </div>
        
       </div>
     </div>
 
-    <!-- <div v-else class="alert alert-danger" role="alert">
+    <div v-else class="alert alert-danger" role="alert">
       No hay datos disponibles
-    </div> -->
+    </div>
     <router-link to="/print" class="btn btn-primary mt-3">Volver</router-link>
   </div>
 </template>
@@ -29,7 +29,7 @@ export default {
 setup(){
   /*   const store = useStore() */
     // const route = useRoute()
-    const persona = ref("")
+    const personas = ref([])
 
    /*  const persona = computed(()=>{ */
       // const index = route.params.index;
@@ -38,16 +38,17 @@ setup(){
    axios.get('https://vueinventarioaxiossa-default-rtdb.firebaseio.com/persona.json')
    .then(res=>{
     console.log(res.data)
-    persona.value = res.data
+    personas.value = res.data
+    /*for(const id in res.data){
+      personas.value.push({
+        id: id,
+        nombreusuario: res.data[id].nombreusuario,
+        password:res.data[id].password,
+      })
+    }*/
    })
    .catch(error => console.log(error))
-    return {persona}
+    return {personas}
   }
-  // computed: {
-  //   persona() {
-  //     const index = this.$route.params.index;
-  //     return this.$store.getters.getPersona(index);
-  //   },
-  // },
   };
 </script>
