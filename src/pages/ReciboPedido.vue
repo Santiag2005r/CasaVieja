@@ -16,26 +16,25 @@
             <legend>Datos del Producto</legend>
             <p>
                 <label>Codigo del Producto</label>
-                <input type="text" name="codigo" size="30px" placeholder="Ingrese el código del producto">
+                <input type="text" v-model="codigo"  placeholder="Ingrese el código del producto">
             </p>
             <p>
                 <label>Nombre del Producto</label>
-                <input type="text" name="nombre-producto" size="30px" placeholder="Ingrese el nombre del producto">
+                <input type="text" v-model="nameProducto"  placeholder="Ingrese el nombre del producto">
             </p>
             <h6>Si el tipo de madera que buscas no se encuentra dentro de las opciones, por favor escoge la opción(Otro..cual) 
                 y digítalo en la barra de texto que está al lado.
             </h6>
             <p>
                 <label>Tipo de Madera</label>
-                <select name="Tipo de madera">
-                    <option value="0"></option>
-                    <option value="">opción 1</option>
-                    <option value="">opción 2</option>
-                    <option value="">opción 3</option>
-                    <option value="">opción 4</option>
-                    <option value="">Otro...cual
-                        <input type="text" name="otra madera" size="20px">
-                    </option>
+                <select v-model="TipoMadera">
+                    <option value="Madera1">opción 1</option>
+                    <option value="Madera2">opción 2</option>
+                    <option value="Madera3">opción 3</option>
+                    <option value="Madera4">opción 4</option>
+                    <!-- <option value="Madera5">Otro...cual -->
+                        <!-- <input type="text" v-model="OtraMadera" size="20px"> -->
+                    <!-- </option> -->
                 </select>
             </p>
             <h6>Para realizar el pago de tu pedido, debes ponerte en contacto con el administrador vía whatsapp o por 
@@ -44,85 +43,101 @@
             </h6>
             <p>
                 <label>Medio de Pago</label>
-                <select name="Medio de pago">
-                    <option value="0"></option>
-                    <option value="">Transferencia</option>
-                    <option value="">Consignación(Nequi)</option>
-                    <option value="">Efectivo</option>
+                <select v-model="MedioPago">
+                    <option value="Transferencia">Transferencia</option>
+                    <option value="Consignación">Consignación(Nequi)</option>
+                    <option value="Efectivo">Efectivo</option>
                 </select>
             </p>
-            <p>
+             <p>
                 <label>Tipo de Tela</label>
-                <select name="Tipo de tela">
-                    <option value="0"></option>
-                    <option value="">Opción 1</option>
-                    <option value="">Opción 2</option>
-                    <option value="">Opción 3</option>
-                    <option value="">Otro...cual
-                        <input type="text" name="otra tela" size="20px">
-                    </option>
+                <select v-model="TipoTela">
+                    <option value="Tela1">Opción 1</option>
+                    <option value="Tela2">Opción 2</option>
+                    <option value="Tela3">Opción 3</option>
+                    <!-- <option value="">Otro...cual -->
+                        <!-- <input type="text" v-model="otra tela" size="20px"> -->
+                    <!-- </option> -->
                 </select>
-            </p>
+            </p> 
             <legend>Datos Personales</legend>
             <p>
                 <label>Nombres y Apellidos</label>
-                <input type="text" name="nombre" size="30px" placeholder="Nombre(s) y apellidos">
+                <input type="text" v-model="nombre"  placeholder="Nombre(s) y apellidos">
             </p>
             <p>
                 <label>Tipo de Documento</label>
-                <select name="documento de identidad">
-                    <option value="">Cédula de ciudadanía</option>
-                    <option value="">Tarjeta de identidad</option>
-                    <option value="">Cédula de extranjería</option>
+                <select v-model="tipoDoc">
+                    <option value="CC">Cédula de ciudadanía</option>
+                    <option value="TI">Tarjeta de identidad</option>
+                    <option value="CE">Cédula de extranjería</option>
                 </select>
             </p>
             <p>
                 <label>N° de Documento</label>
-                <input type="text" name="n°-documento" size="30px" placeholder="Número de documento">
+                <input type="text" v-model="documento"  placeholder="Número de documento">
             </p>
             <p>
                 <label>Fecha Del Pedido</label>
-                <input type="DATE" name="fecha-n">
+                <input type="DATE" v-model="fecha">
             </p>
             <p>
                 <label>Dirección</label>
-                <input type="text" name="direccion" size="30px" placeholder="Dirección de residencia">
+                <input type="text"  v-model="direccion"  placeholder="Dirección de residencia">
             </p>
-            <a @click="generatePDF()" id="downloadButton">Descargar Pedido</a>
-        </fieldset>        
+            <button class="btn btn-primary" @click="addPedido">
+                Añadir
+              </button>
+                    </fieldset>        
     </form>    
 </div>
 </body>
 </template>
 
 <script>
-import jsPDF from 'jspdf'
-import html2canvas from 'jspdf-html2canvas'
+//import jsPDF from 'jspdf'
+//import html2canvas from 'jspdf-html2canvas'
+import {ref} from 'vue'
+import axios from 'axios'
+//import {useStore} from 'vuex'
+//import {useRouter} from 'vue-router'
 export default{
-data(){
-return {
 
-}},
-    methods:{
-generatePDF(){
-    document.getElementById("downloadButton").innetHTML ="Descargando tu pedido";
-    //descargando
+setup(){
+    const codigo= ref("")
+    const nameProducto= ref("")
+    // const TipoMadera= ref("")
+    // const MedioPago= ref("")
+    // const TipoTela= ref("")
+    const nombre= ref("")
+    const tipoDoc= ref("")
+    const documento= ref("")
+    // const fecha= ref("")
+    const direccion= ref("")
 
-    var downloading = document.getElementById("whatToPrint");
-    var doc = new jsPDF('1','pt');
-    
-    html2canvas(downloading,{
-        //allowTaint: true,
-        //useCORS: true,
-        width: 550
-    }).then((canvas) => {
-        doc.addImage(canvas.toDataURL("image/png"), 'PNG', 5, 5, 500, 500);
-    });
-    //fin de la descarga
-   
+    function addPedido(){
+      if(codigo.value != ''/*codigo.value != '' && nameProducto.value != "" && TipoMadera.value != '' && MedioPago.value != '' && TipoTela.value != '' && nombre.value != '' && tipoDoc.value  != ''  && documento.value != '' && fecha.value != '' && direccion.value != ''*/){
+        const pedido = {
+          codigo:codigo.value,
+          nameProducto:nameProducto.value,
+        //   TipoMadera:TipoMadera.value,
+        //   MedioPago:MedioPago.value,
+        //   TipoTela:TipoTela.value,
+          nombre:nombre.value,
+          tipoDoc:tipoDoc.value,
+          documento:documento.value,
+        //   fecha:fecha.value,
+          direccion:direccion.value
+            }
+        
+        axios.post('https://vueinventarioaxiossa-default-rtdb.firebaseio.com/pedido.json',pedido).then(res=>console.log(res)).catch(error => console.log(error))
+      }
+    }
+    return{codigo, nameProducto,/*TipoMadera,MedioPago,TipoTela*/nombre,tipoDoc,documento,/*fecha*/direccion,addPedido}
+  }
    
 }
-}}
+//}}
 </script>
 
 <style scoped>

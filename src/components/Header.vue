@@ -41,8 +41,14 @@
             >¡Pedir!</router-link
           >
         </li>
+        <li class="nav-item" v-if="verificar">
+          <router-link to="/PedidoGet" class="nav-link" active-class="active"
+            >PedidoGet</router-link
+          >
+        </li>
         <button v-if="verificar"><a href="/log">Cerrar Sesion</a></button>
       </ul>
+      <h1 v-if="verificar">Bienvenido!</h1>
   </nav>
 </body>
 </template>

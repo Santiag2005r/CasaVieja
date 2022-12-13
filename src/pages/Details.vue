@@ -39,13 +39,7 @@ setup(){
    .then(res=>{
     console.log(res.data)
     personas.value = res.data
-    /*for(const id in res.data){
-      personas.value.push({
-        id: id,
-        nombreusuario: res.data[id].nombreusuario,
-        password:res.data[id].password,
-      })
-    }*/
+    
    })
    .catch(error => console.log(error))
     return {personas}
