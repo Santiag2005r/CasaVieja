@@ -21,21 +21,21 @@
 <script>
 /* import {computed} from 'vue' */
 /* import {useStore} from 'vuex' */
-// import {useRoute} from 'vue-router'
+import {useRoute} from 'vue-router'
 import{ref} from 'vue'
 import axios from 'axios'
 
 export default {
 setup(){
   /*   const store = useStore() */
-    // const route = useRoute()
+     const route = useRoute()
     const personas = ref([])
 
    /*  const persona = computed(()=>{ */
-      // const index = route.params.index;
+      const index = route.params.index;
     /*   return store.getters.getPersona(index); */
    /*  }) */
-   axios.get('https://vueinventarioaxiossa-default-rtdb.firebaseio.com/persona.json')
+   axios.get('https://vueinventarioaxiossa-default-rtdb.firebaseio.com/persona/'+index+'.json')
    .then(res=>{
     console.log(res.data)
     personas.value = res.data

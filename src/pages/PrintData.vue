@@ -4,7 +4,7 @@
 
     <ul class="list-group">
       <li v-for="(persona, i) in personas" :key="i"  class="list-group-item" >
-        <router-link :to="`/details/${i}`">{{
+        <router-link :to="`/details/${persona.id}`">{{
           persona.nombreusuario
         }}</router-link>
       </li>
