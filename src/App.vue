@@ -2,6 +2,7 @@
   <app-header class="mb-3" /> 
 
   <router-view />
+  
 </template>
 
 <script>

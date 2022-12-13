@@ -1,10 +1,10 @@
 <template>
   <div>
-    <h3>A&ntilde;adir invitados</h3>
+    <h3>Registrar Usuarios</h3>
 
     <div class="card" style="width: 35rem">
       <div class="card-body">
-        <h5 class="card-title">Registrese</h5>
+        <h5 class="card-title">¡Registrar Nuevo Usuario!</h5>
 
         <div class="form-group">
           <label for="formGroupExampleInput">Nombre</label>
@@ -12,7 +12,7 @@
             v-model="nombreusuario"
             type="text"
             class="form-control"
-            placeholder="Armando Agudelo"
+            placeholder="Nombre de Usuario"
           />
         </div>
         <div class="form-group">
@@ -21,7 +21,7 @@
             v-model="password"
             type="password"
             class="form-control"
-            placeholder="aagudelo@elemail.com"
+            placeholder="Contraseña"
           />
         </div>
         <!-- <div class="form-group">
@@ -92,3 +92,70 @@ export default {
    },*/
 };
 </script>
+<style scoped>
+.main[data-v-04b5aa7d] {
+    background: rgba(178, 135, 98, 0.269);
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 30%;
+    text-align: center;
+    padding: 70px;
+    border-radius: 3rem
+rem
+;
+    box-shadow: 0px 0px 8px -5px #000000;
+    padding-top: 3%;
+    padding-bottom: 5%;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+}
+.card-body{
+  padding: 40px;
+  margin-top: 20px;
+  align-content: center;
+}
+div{
+  align-content: center;
+  display:fixed;
+  left:400px;
+  border-radius: 30px;  
+}
+.card{
+  padding: 10px;
+  align-content: center;
+  width: 300px;
+  background-color: rgba(247, 180, 45, 0.269);
+}
+h3{
+  text-align: center;
+  
+}
+.btn-primary {
+    color: #fff;
+    background-color: #7b6134;
+    border-color: #523918;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 20px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    font-family: "Poppins", sans-serif;
+}
+h5{
+  font-family: arial black;
+  font-size: 40px;
+  color:rgb(150, 128, 110);
+  text-align: center;
+}
+</style>

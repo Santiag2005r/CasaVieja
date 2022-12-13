@@ -1,6 +1,9 @@
 <template>
-  <nav class="navbar navbar-light nav-pills" style="background-color: #ffc10761">
-    <div class="container">
+  <body>
+    
+ 
+  <nav class="navbar navbar-light nav-pills">
+    <!-- <div class="container"> -->
       <ul class="nav">
        
         <li class="nav-item">
@@ -9,8 +12,8 @@
           >
         </li>
         <li class="nav-item" v-if="verificar">
-          <router-link to="/registro" class="nav-link" active-class="active"
-            >Formulario</router-link
+          <router-link to="/" class="nav-link" active-class="active"
+            >Agregar Usuarios</router-link
           >
         </li>
         <li class="nav-item">
@@ -20,7 +23,7 @@
         </li>
         <li class="nav-item" v-if="verificar">
           <router-link to="/print" class="nav-link" active-class="active"
-            >Personas</router-link
+            >Usuarios Registrados</router-link
           >
         </li>
          <li class="nav-item">
@@ -33,11 +36,21 @@
             >Productos</router-link
           >
         </li> -->
-       
+        <li class="nav-item">
+          <router-link to="/Index" class="nav-link" active-class="active"
+            >Inicio</router-link
+          >
+        </li>
+        <li class="nav-item" v-if="verificar">
+          <router-link to="/Pedido" class="nav-link" active-class="active"
+            >¡Pedir!</router-link
+          >
+        </li>
         <button v-if="verificar"><a href="/log">Cerrar Sesion</a></button>
       </ul>
     </div>
   </nav>
+</body>
 </template>
 <script>
 
@@ -60,5 +73,28 @@ export default {
 }}
 </script>
 <style>
+body{
+  background-color: #d8c6bc;
+}
+.nav-item{
+  color: #8b6c53;
+}
+.nav-link{
+  color: #FFF;
+  background-color:#8e400000;
+  border-color: #95786b;
+  transition-duration: 0.4s;
 
+}
+.nav-link:hover {
+  background-color: #af9784;
+  color: white;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #9f8672;
+}
+.navbar{
+  color:#8b6c53
+}
 </style>
