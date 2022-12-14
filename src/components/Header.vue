@@ -18,7 +18,7 @@
         </li>
         <li class="nav-item">
           <router-link to="/Pedidos" class="nav-link" active-class="active"
-            >Pedidos</router-link
+            >¡Pedir!</router-link
           >
         </li>
         <li class="nav-item" v-if="verificar">
@@ -36,11 +36,6 @@
             >Productos</router-link
           >
         </li> -->
-               <li class="nav-item" v-if="verificar">
-          <router-link to="/Pedido" class="nav-link" active-class="active"
-            >¡Pedir!</router-link
-          >
-        </li>
         <li class="nav-item" v-if="verificar">
           <router-link to="/PedidoGet" class="nav-link" active-class="active"
             >PedidoGet</router-link
@@ -77,7 +72,7 @@ export default {
 </script>
 <style>
 body{
-  background-color: #d8c6bc;
+  background-color: #c2aa9e;
 }
 .nav-item{
   color: #8b6c53;

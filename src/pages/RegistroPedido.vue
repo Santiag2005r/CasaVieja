@@ -1,10 +1,10 @@
 <template>
   <div>
-    <h3>Haz tu pedido</h3>
+    <title>Haz tu pedido</title>
 
     <div class="card" style="width: 35rem">
       <div class="card-body">
-        <h5 class="card-title">¡Realiza Tu Pedido Con nosotros</h5>
+        <h1 class="card-title">¡Realiza Tu Pedido Con Nosotros!</h1>
         <h2>Formulario Para Diligenciar Tu Pedido</h2>
     <h6><br/>Recuerda que para diligenciar tu pedido debes conocer los soguientes datos del producto
         <br/>que deseas adquirir: Nombre del producto,Código del producto(el cual se muestra debajo de la imagen 
@@ -208,3 +208,49 @@ export default {
    },*/
 };
 </script>
+<style scoped>
+h1{
+    font-family: arial black;
+    text-align: center;
+    cursor:default;
+    color:rgb(150, 128, 110);
+}
+h2{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:36px;
+    color: black;
+    text-align: center;
+}
+h6{
+    color:rgb(102, 102, 102);
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+legend{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    text-align: center;
+}
+input{
+    border-radius: 10px;
+    border-style: none;
+    font-family: "Poppins", sans-serif;
+    margin:10px;
+    padding: 10px;
+}
+
+.card {
+    width: auto;
+    height: 100%;
+    margin:auto;
+    background-color: rgba(218, 182, 136, 0.877);
+    border-style: none;
+    border-radius: 30px;
+    border-style: solid;
+    border-width: 2px;
+    justify-content: center;
+}
+</style>

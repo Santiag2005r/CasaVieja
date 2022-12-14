@@ -211,7 +211,7 @@
                       </div> <!--.card-->
               </div>
           </div> <!--.row-->
-          <h3>Almuerzos</h3>
+          <h3>Comedores</h3>
 
 
           <div class="row">
