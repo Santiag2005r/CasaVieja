@@ -7,7 +7,7 @@
         <h1 class="card-title">¡Realiza Tu Pedido Con Nosotros!</h1>
         <h2>Formulario Para Diligenciar Tu Pedido</h2>
     <h6><br/>Recuerda que para diligenciar tu pedido debes conocer los soguientes datos del producto
-        <br/>que deseas adquirir: Nombre del producto,Código del producto(el cual se muestra debajo de la imagen 
+        que deseas adquirir: Nombre del producto,Código del producto(el cual se muestra debajo de la imagen 
         <br/>de cada producto), Tipo de madera, Medio de pago, TIpo de tela, Color y tipo de pintura.
     </h6>
     <legend>Datos del Producto</legend>
@@ -178,7 +178,7 @@ export default {
           fecha:fecha.value,
 
           /*aporte:aporte.value*/
-         }
+         }        
         /*    store.dispatch("addPersona", persona);        
         router.push('/print') */
         axios.post('https://vueinventarioaxiossa-default-rtdb.firebaseio.com/pedido.json',pedido).then(res=>console.log(res)).catch(error => console.log(error))

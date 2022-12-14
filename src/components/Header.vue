@@ -16,7 +16,7 @@
             >Agregar Usuarios</router-link
           >
         </li>
-        <li class="nav-item">
+        <li class="nav-item" v-if="verificar">
           <router-link to="/Pedidos" class="nav-link" active-class="active"
             >¡Pedir!</router-link
           >

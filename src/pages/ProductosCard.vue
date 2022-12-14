@@ -116,7 +116,7 @@
                                               <thead>
                                               </thead>
                                           </table>
-                                          <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                                          <a href="#" id="vaciar-carrito" class="button u-full-width"></a>
                                           <input type='submit' @click="regitro" id="vaciar-carrito" class="button u-full-width" value="Registrar" />
                                   </div>
                           </li>
@@ -217,9 +217,10 @@
           <div class="row">
               <div class="four columns">
                   <div class="card">
-                      <img src="../assets/producto7.jpg" class="imagen-curso u-full-width">
+                      <img src="../assets/comedor-mueble1.jpg" class="imagen-curso u-full-width">
                       <div class="info-card">
-                          <h4>Ventana Con Puertas en Madera</h4>
+                          <h4>Comedor 4 puestos</h4>
+                          <p>Cod xxx-xxx</p>
                           <p class="precio">$450.000 <span class="u-pull-right ">$375900</span></p>
                           <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="7">Agregar Al Carrito</a>
                       </div>
@@ -228,9 +229,10 @@
               
                 <div class="four columns">
                     <div class="card">
-                        <img src="../assets/producto8.jpg" class="imagen-curso u-full-width">
+                        <img src="../assets/comedor-mueble2.jpg" class="imagen-curso u-full-width">
                         <div class="info-card">
-                            <h4>Ventana Con Puertas en Madera</h4>
+                            <h4>Comedor 6 puestos</h4>
+                            <p>Cod xxx-xxx</p>
                             <p class="precio">$450.000 <span class="u-pull-right ">$375900</span></p>
                             <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="8">Agregar Al Carrito</a>
                         </div>
@@ -240,9 +242,10 @@
               
                 <div class="four columns">
                     <div class="card">
-                        <img src="../assets/producto8.jpg" class="imagen-curso u-full-width">
+                        <img src="../assets/comedor-mueble3.jpg" class="imagen-curso u-full-width">
                         <div class="info-card">
-                            <h4>Ventana Con Puertas en Madera</h4>
+                            <h4>Comedor 8 puestos</h4>
+                            <p>Cod xxx-xxx</p>
                             <p class="precio">$450.000 <span class="u-pull-right ">$375900</span></p>
                             <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="9">Agregar Al Carrito</a>
                         </div>
@@ -254,9 +257,10 @@
                 <div class="row">
                   <div class="four columns">
                       <div class="card">
-                          <img src="../assets/producto7.jpg" class="imagen-curso u-full-width">
+                          <img src="../assets/comedor-mueble4.jpg" class="imagen-curso u-full-width">
                           <div class="info-card">
-                              <h4>Ventana Con Puertas en Madera</h4>
+                              <h4>Comedor 6 puestos</h4>
+                              <p>Cod xxx-xxx</p>
                               <p class="precio">$450.000 <span class="u-pull-right ">$375900</span></p>
                               <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="7">Agregar Al Carrito</a>
                           </div>
@@ -265,9 +269,10 @@
                   
                     <div class="four columns">
                         <div class="card">
-                            <img src="../assets/producto8.jpg" class="imagen-curso u-full-width">
+                            <img src="../assets/comedor-mueble5.jpg" class="imagen-curso u-full-width">
                             <div class="info-card">
-                                <h4>Ventana Con Puertas en Madera</h4>
+                                <h4>Mesa cuadrada 4 puestos</h4>
+                                <p>Cod xxx-xxx</p>
                                 <p class="precio">$450.000 <span class="u-pull-right ">$375900</span></p>
                                 <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="8">Agregar Al Carrito</a>
                             </div>
@@ -277,9 +282,10 @@
                   
                     <div class="four columns">
                         <div class="card">
-                            <img src="../assets/producto8.jpg" class="imagen-curso u-full-width">
+                            <img src="../assets/comedor-mueble6.jpg" class="imagen-curso u-full-width">
                             <div class="info-card">
-                                <h4>Ventana Con Puertas en Madera</h4>
+                                <h4>Comedor 6 puestos con silla irlandesa</h4>
+                                <p>Cod xxx-xxx</p>
                                 <p class="precio">$450.000 <span class="u-pull-right ">$375900</span></p>
                                 <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="9">Agregar Al Carrito</a>
                             </div>
@@ -292,9 +298,10 @@
                 <div class="row">
               <div class="four columns">
                       <div class="card">
-                          <img src="../assets/producto7.jpg" class="imagen-curso u-full-width">
+                          <img src="../assets/comedor-mueble7.jpg" class="imagen-curso u-full-width">
                           <div class="info-card">
-                              <h4>Cama Doble en Madera</h4>
+                              <h4>Comedor Nórdico 4 puestos</h4>
+                              <p>Cod xxx-xxx</p>
                               <p class="precio">$1.000.000  <span class="u-pull-right ">$889990</span></p>
                               <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="12">Agregar Al Carrito</a>
                           </div>
@@ -304,36 +311,28 @@
           
               <div class="four columns">
                 <div class="card">
-                    <img src="../assets/producto7.jpg" class="imagen-curso u-full-width">
+                    <img src="../assets/comedor-mueble8.jpg" class="imagen-curso u-full-width">
                     <div class="info-card">
-                        <h4>Cama Doble en Madera</h4>
+                        <h4>Comedor Clásico 4 puestos</h4>
+                        <p>Cod xxx-xxx</p>
                         <p class="precio">$1.000.000  <span class="u-pull-right ">$889990</span></p>
                         <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="12">Agregar Al Carrito</a>
                     </div>
                 </div> <!--.card-->
         </div>
-        <div class="four columns">
-          <div class="card">
-              <img src="../assets/producto7.jpg" class="imagen-curso u-full-width">
-              <div class="info-card">
-                  <h4>Cama Doble en Madera</h4>
-                  <p class="precio">$1.000.000  <span class="u-pull-right ">$889990</span></p>
-                  <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="12">Agregar Al Carrito</a>
-              </div>
-          </div> <!--.card-->
-        </div><!--.row-->
       </div>
 
-      <h3>Almuerzos</h3>
+      <h3>Salas/Sillones</h3>
 
 
 <div class="row">
     <div class="four columns">
         <div class="card">
-            <img src="../assets/producto7.jpg" class="imagen-curso u-full-width">
+            <img src="../assets/otro1.jpg" class="imagen-curso u-full-width">
             <div class="info-card">
-                <h4>Ventana Con Puertas en Madera</h4>
-                <p class="precio">$450.000 <span class="u-pull-right ">$375900</span></p>
+                <h4>Juego de sala Rústico</h4>
+                <p>Cod xxx-xxx</p>
+                <p class="precio">$1.700.000 <span class="u-pull-right ">$1449950</span></p>
                 <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="7">Agregar Al Carrito</a>
             </div>
         </div> <!--.card-->
@@ -341,10 +340,11 @@
     
       <div class="four columns">
           <div class="card">
-              <img src="../assets/producto8.jpg" class="imagen-curso u-full-width">
+              <img src="../assets/otro2.jpg" class="imagen-curso u-full-width">
               <div class="info-card">
-                  <h4>Ventana Con Puertas en Madera</h4>
-                  <p class="precio">$450.000 <span class="u-pull-right ">$375900</span></p>
+                  <h4>Juego de sala Clásico + mesa de centro</h4>
+                  <p>Cod xxx-xxx</p>
+                  <p class="precio">$1.350.000<span class="u-pull-right ">$1259000</span></p>
                   <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="8">Agregar Al Carrito</a>
               </div>
           </div> <!--.card-->
@@ -353,10 +353,11 @@
     
       <div class="four columns">
           <div class="card">
-              <img src="../assets/producto8.jpg" class="imagen-curso u-full-width">
+              <img src="../assets/otro3.jpg" class="imagen-curso u-full-width">
               <div class="info-card">
-                  <h4>Ventana Con Puertas en Madera</h4>
-                  <p class="precio">$450.000 <span class="u-pull-right ">$375900</span></p>
+                  <h4>2 Sillones estilo Irlandés</h4>
+                  <p>Cod xxx-xxx</p>
+                  <p class="precio">$990.000 <span class="u-pull-right ">$945000</span></p>
                   <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="9">Agregar Al Carrito</a>
               </div>
           </div> <!--.card-->
@@ -367,10 +368,11 @@
       <div class="row">
         <div class="four columns">
             <div class="card">
-                <img src="../assets/producto7.jpg" class="imagen-curso u-full-width">
+                <img src="../assets/otro4.jpg" class="imagen-curso u-full-width">
                 <div class="info-card">
-                    <h4>Ventana Con Puertas en Madera</h4>
-                    <p class="precio">$450.000 <span class="u-pull-right ">$375900</span></p>
+                    <h4>Sillón clásico Dorado</h4>
+                    <p>Cod xxx-xxx</p>
+                    <p class="precio">$750.000 <span class="u-pull-right ">$680900</span></p>
                     <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="7">Agregar Al Carrito</a>
                 </div>
             </div> <!--.card-->
@@ -378,10 +380,11 @@
         
           <div class="four columns">
               <div class="card">
-                  <img src="../assets/producto8.jpg" class="imagen-curso u-full-width">
+                  <img src="../assets/otro5.jpg" class="imagen-curso u-full-width">
                   <div class="info-card">
-                      <h4>Ventana Con Puertas en Madera</h4>
-                      <p class="precio">$450.000 <span class="u-pull-right ">$375900</span></p>
+                      <h4>Sillón Moderno 3 puestos</h4>
+                      <p>Cod xxx-xxx</p>
+                      <p class="precio">$1.250.000 <span class="u-pull-right ">$999550</span></p>
                       <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="8">Agregar Al Carrito</a>
                   </div>
               </div> <!--.card-->
@@ -390,10 +393,11 @@
         
           <div class="four columns">
               <div class="card">
-                  <img src="../assets/producto8.jpg" class="imagen-curso u-full-width">
+                  <img src="../assets/otro6.jpg" class="imagen-curso u-full-width">
                   <div class="info-card">
-                      <h4>Ventana Con Puertas en Madera</h4>
-                      <p class="precio">$450.000 <span class="u-pull-right ">$375900</span></p>
+                      <h4>Juego de Sala Vintage</h4>
+                      <p>Cod xxx-xxx</p>
+                      <p class="precio">$1.750.000 <span class="u-pull-right ">$1499790</span></p>
                       <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="9">Agregar Al Carrito</a>
                   </div>
               </div> <!--.card-->
@@ -405,10 +409,11 @@
       <div class="row">
     <div class="four columns">
             <div class="card">
-                <img src="../assets/producto7.jpg" class="imagen-curso u-full-width">
+                <img src="../assets/otro7.jpg" class="imagen-curso u-full-width">
                 <div class="info-card">
-                    <h4>Cama Doble en Madera</h4>
-                    <p class="precio">$1.000.000  <span class="u-pull-right ">$889990</span></p>
+                    <h4>Sala Clásica + mesa de centro</h4>
+                    <p>Cod xxx-xxx</p>
+                    <p class="precio">$2.889.990  <span class="u-pull-right ">$2770000</span></p>
                     <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="12">Agregar Al Carrito</a>
                 </div>
             </div> <!--.card-->
@@ -417,9 +422,10 @@
 
     <div class="four columns">
       <div class="card">
-          <img src="../assets/producto7.jpg" class="imagen-curso u-full-width">
+          <img src="../assets/otro8.jpg" class="imagen-curso u-full-width">
           <div class="info-card">
-              <h4>Cama Doble en Madera</h4>
+              <h4>Sofá Cama Plateado</h4>
+              <p>Cod xxx-xxx</p>
               <p class="precio">$1.000.000  <span class="u-pull-right ">$889990</span></p>
               <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="12">Agregar Al Carrito</a>
           </div>
@@ -427,10 +433,11 @@
 </div>
 <div class="four columns">
 <div class="card">
-    <img src="../assets/producto7.jpg" class="imagen-curso u-full-width">
+    <img src="../assets/otro9.jpg" class="imagen-curso u-full-width">
     <div class="info-card">
-        <h4>Cama Doble en Madera</h4>
-        <p class="precio">$1.000.000  <span class="u-pull-right ">$889990</span></p>
+        <h4>Sofá en L</h4>
+        <p>Cod xxx-xxx</p>
+        <p class="precio">$1.449.990  <span class="u-pull-right ">$1389000</span></p>
         <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="12">Agregar Al Carrito</a>
     </div>
 </div> <!--.card-->
@@ -1191,8 +1198,8 @@ body {
   input[type="reset"].button-primary:focus,
   input[type="button"].button-primary:focus {
     color: #FFF;
-    background-color: #976b0c;
-    border-color: #976b0c; }
+    background-color: #5a4330;
+    border-color: #302113; }
   
   
   /* Forms
