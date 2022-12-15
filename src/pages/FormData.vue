@@ -65,7 +65,7 @@ export default {
         }
         /*    store.dispatch("addPersona", persona);        
         router.push('/print') */
-        axios.post('https://vueinventarioaxiossa-default-rtdb.firebaseio.com/persona.json',persona).then(res=>console.log(res)).catch(error => console.log(error))
+        axios.post('https://casavieja-7b8f4-default-rtdb.firebaseio.com/persona.json',persona).then(res=>console.log(res)).catch(error => console.log(error))
       }
     }
     return{nombreusuario, password , addPersona}

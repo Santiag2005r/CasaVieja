@@ -2,12 +2,12 @@
   <div>
     <h3>Pedidos</h3>
 
-    <ul class="list-group">
+    <ul class="list-group">      
       <li v-for="(pedido, i) in pedidos" :key="i"  class="list-group-item">
         <router-link :to="`/InfoPedido/${pedido.id}`">{{
           pedido.fecha
         }}</router-link>
-      </li>
+      </li>      
     </ul>
   </div>
 </template>
@@ -18,7 +18,7 @@ import {ref} from 'vue';
 export default {
   setup(){
     const pedidos = ref([])
-  axios.get('https://vueinventarioaxiossa-default-rtdb.firebaseio.com/pedido.json')
+  axios.get('https://casavieja-7b8f4-default-rtdb.firebaseio.com/pedido.json')
   .then(res =>{
     console.log(res)
     for(const id in res.data){
@@ -48,3 +48,33 @@ export default {
 };
   
 </script>
+<style scoped>
+h3{
+  text-align: center;
+  font-family: Arial black;
+  color:rgb(153, 109, 60);
+  text-shadow: 2px 2px rgb(48, 26, 5);
+  font-size: 40px;
+}
+li{
+  border-style: solid;
+  border-color: #221812;
+  font-family:  "Poppins", sans-serif;
+  font-size: 20px;
+  margin-left: 25%;
+  margin-right: 25%;  
+  background-color: rgba(247, 180, 45, 0.269);
+  
+}
+.list-group{
+  border-radius:15px;
+  border-width: 2px;
+  color: black;
+
+}
+a {
+    color: #221812;
+    text-decoration: none;
+    background-color: transparent;
+}
+</style>

@@ -181,7 +181,7 @@ export default {
          }        
         /*    store.dispatch("addPersona", persona);        
         router.push('/print') */
-        axios.post('https://vueinventarioaxiossa-default-rtdb.firebaseio.com/pedido.json',pedido).then(res=>console.log(res)).catch(error => console.log(error))
+        axios.post('https://casavieja-7b8f4-default-rtdb.firebaseio.com/pedido.json',pedido).then(res=>console.log(res)).catch(error => console.log(error))
       }
     }
     return{codigo, nameProducto, TipoMadera, MedioPago, TipoTela, nombre, tipoDoc, documento, direccion ,fecha, addPedido}

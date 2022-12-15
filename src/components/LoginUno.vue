@@ -1,7 +1,9 @@
 <template>
     <div class="main">
       <form v-on:submit.prevent="login">
-  <h1 style="text-align:center; font-family:arial Black;">¡Bienvenido!</h1>
+        <h1>¡Bienvenido Administrador!</h1>
+
+        <h6>Nombre de Usuario</h6>
     <input
     v-model="nombreusuario"
       type="text"
@@ -12,6 +14,7 @@
       :style="input"
     />
     <br />
+    <h6>Contraseña</h6>
     <input
     v-model="password"
       type="password"
@@ -59,7 +62,7 @@ export default {
   },
 methods:{
   buscarUsuario(){
-  axios.get('https://vueinventarioaxiossa-default-rtdb.firebaseio.com/persona.json')
+  axios.get('https://casavieja-7b8f4-default-rtdb.firebaseio.com/persona.json')
   .then(res=>{console.log(res);
     console.log(this.nombreusuario,'usuario')
     console.log(this.password,'usuario')
@@ -103,24 +106,26 @@ this.usuarios.value=[]
 .main {
   background: rgba(247, 180, 45, 0.269);
   position:absolute;
-  top: 20%;
-  left: 35%;
-  width: 30%;
+  top:auto;
+  left:25%;
+  width:auto;
   text-align: center;
-  padding: 70px;
+  padding:30px;
   border-radius: 3rem;
   box-shadow: 0px 0px 8px -5px #000000;
   padding-top: 3%;
   padding-bottom: 5%;
   font-family: "Poppins", sans-serif;
-  display:block;
+  display:flex;
 }
 
 h1 {
-  cursor: default;
-  user-select: none;
   color:rgb(150, 128, 110); 
   display: flex;
+  font-family: Arial black;
+  text-align: center;
+  text-shadow: 2px 2px black;
+  font-size: 45px;
 }
 
 input {
@@ -149,7 +154,7 @@ input:active {
 }
 #done:hover{
   color:white;
-  background-color: rgb(135, 101, 70);
+  background-color: rgb(73, 52, 33);
 }
 .button {
   cursor: pointer;
@@ -173,5 +178,8 @@ div{
 .button{
   color: white;
 }
-
+h6{
+  margin-top: 20px;
+  font-size: 20px;
+}
 </style>
